@@ -74,6 +74,10 @@ body {
   margin: 0;
 }
 
+.message .notice {
+  margin-top: 1.25rem;
+}
+
 .footer {
   padding-top: 2rem;
   border-top: 1px solid rgba(78, 205, 196, 0.2);
