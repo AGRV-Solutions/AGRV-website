@@ -1,0 +1,86 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  /* Palette from logo: greens, teals, deep blue, grey */
+  --bg: #0a0f14;
+  --text: #e8e6e3;
+  --muted: #707070;
+  --accent: #4ECDC4;
+  --accent-green: #7ED957;
+  --accent-blue: #2D77AE;
+  --font-sans: "DM Sans", system-ui, sans-serif;
+  --font-serif: "Instrument Serif", Georgia, serif;
+}
+
+html {
+  font-size: 18px;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.container {
+  max-width: 42rem;
+  width: 100%;
+  text-align: center;
+}
+
+.brand {
+  margin-bottom: 3rem;
+}
+
+.logo-img {
+  display: block;
+  max-width: min(340px, 80vw);
+  height: auto;
+  margin: 0 auto 0.5rem;
+}
+
+.tagline {
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin: 0;
+  font-weight: 400;
+}
+
+.message {
+  margin-bottom: 4rem;
+}
+
+.lead {
+  font-size: 1.35rem;
+  color: var(--accent);
+  margin: 0 0 0.75rem;
+  font-weight: 600;
+}
+
+.sub {
+  font-size: 1rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+.footer {
+  padding-top: 2rem;
+  border-top: 1px solid rgba(78, 205, 196, 0.2);
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
