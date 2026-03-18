@@ -3,49 +3,540 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AGRV Solutions</title>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RC9H5XK34E"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-RC9H5XK34E');
-  </script>
-  <meta name="description" content="AGRV Solutions — We're an IT company based in Minnesota. We help clients reduce costs, navigate software, and solve technology challenges.">
+  <title>AGRV Solutions — Confidential Software &amp; Data Solutions</title>
+  <meta name="description" content="AGRV Solutions is a remote-first technology firm of scientists and engineers delivering custom software, AI, and data solutions — built for you and owned by you. Serving clients nationwide.">
   <link rel="canonical" href="https://agrvsolutions.com/">
   <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="images/favicons/apple-touch-icon.png">
   <meta property="og:type" content="website">
   <meta property="og:title" content="AGRV Solutions">
-  <meta property="og:description" content="We're an IT company based in Minnesota. We help clients reduce costs, navigate software, and solve technology challenges.">
+  <meta property="og:description" content="Custom software &amp; data solutions built for you, owned by you. Based in Minnesota.">
   <meta property="og:url" content="https://agrvsolutions.com/">
   <meta property="og:image" content="https://agrvsolutions.com/images/logo.png">
-  <meta property="og:site_name" content="AGRV Solutions">
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap" rel="stylesheet">
+  <script>
+    /* Apply saved theme before first paint to prevent flash */
+    (function(){var t=localStorage.getItem('agrv-theme');if(t==='dark')document.documentElement.setAttribute('data-theme','dark');})();
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RC9H5XK34E"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-RC9H5XK34E');</script>
 </head>
 <body>
-  <main class="container">
-    <header class="brand">
-      <img src="images/logo.png" alt="AGRV Solutions" class="logo-img" width="340" height="146">
-      <p class="tagline">agrvsolutions.com</p>
-    </header>
-    <section class="message">
-      <p class="lead">Building smarter solutions for your business.</p>
-      <p class="sub">AGRV Solutions is a Minnesota-based IT company helping clients streamline operations, optimize software systems, and overcome complex technology challenges.</p>
-      <p class="sub notice">We're upgrading our systems. Stay tuned — we'll be back in 2 weeks.</p>
+<div class="page-wrap">
+
+  <!-- NAV -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a class="nav-logo" href="index.html" aria-label="AGRV Solutions Home">
+        <img src="images/logo.png" alt="AGRV Solutions">
+      </a>
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li class="has-dropdown">
+          <a href="services.html">Solutions <svg class="nav-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <ul class="nav-dropdown" role="list">
+            <li><a href="services/custom-software.html"><span class="dropdown-icon">&#128187;</span>Custom Software</a></li>
+            <li><a href="services/data-modeling.html"><span class="dropdown-icon green">&#128202;</span>Data Modeling &amp; Analytics</a></li>
+            <li><a href="services/data-infrastructure.html"><span class="dropdown-icon blue">&#128274;</span>Data Infrastructure</a></li>
+            <li><a href="services/consulting.html"><span class="dropdown-icon">&#128172;</span>Scientific Consulting</a></li>
+            <li><a href="services/ai-ml.html"><span class="dropdown-icon green">&#129302;</span>AI &amp; Machine Learning</a></li>
+            <li><a href="services/training-platforms.html"><span class="dropdown-icon blue">&#127891;</span>Training &amp; Education Platforms</a></li>
+            <li><a href="services/maintenance.html"><span class="dropdown-icon">&#128295;</span>Maintenance &amp; Support</a></li>
+            <div class="nav-dropdown-divider"></div>
+            <li><a href="services.html">&#8594; View all solutions</a></li>
+          </ul>
+        </li>
+        <li class="has-dropdown">
+          <a href="about.html">About <svg class="nav-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></a>
+          <ul class="nav-dropdown" role="list">
+            <li><a href="about.html#mission"><span class="dropdown-icon">&#127919;</span>Mission &amp; Values</a></li>
+            <li><a href="about.html#team"><span class="dropdown-icon green">&#128101;</span>Our Team</a></li>
+            <li><a href="about.html#service-area"><span class="dropdown-icon blue">&#127758;</span>Service Area</a></li>
+          </ul>
+        </li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <button class="theme-toggle" id="themeToggle" aria-label="Switch to dark mode">
+          <!-- Moon (shown in light mode) -->
+          <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <!-- Sun (shown in dark mode, hidden initially) -->
+          <svg class="icon-sun" style="display:none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <a href="contact.html" class="btn btn-primary">Talk to Us</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ═══ HERO ═══ -->
+    <section class="hero-v2">
+      <div class="hero-v2-inner">
+
+        <!-- Left: text -->
+        <div class="hero-v2-text">
+          <div class="hero-eyebrow">&#127966; Remote-First &nbsp;·&nbsp; Serving Clients Nationwide</div>
+          <h1 class="hero-headline">
+            Confidential Software &amp; Data Solutions
+            <span class="hero-headline-gradient">Built for You. Owned by You.</span>
+          </h1>
+          <p class="hero-sub">We are scientists and engineers who design, build, and deploy custom software platforms, AI systems, and data infrastructure — so your workflows, data, and IP stay completely in your control. Forever.</p>
+          <div class="hero-btns">
+            <a href="services.html" class="btn btn-primary btn-lg">Explore Our Solutions</a>
+            <a href="contact.html" class="btn btn-outline btn-lg">Talk to an Expert</a>
+          </div>
+          <div class="hero-proof-row">
+            <div class="hero-proof-item">
+              <div class="hero-proof-num">PhD + MSc</div>
+              <div class="hero-proof-label">Founding Team</div>
+            </div>
+            <div class="hero-proof-item">
+              <div class="hero-proof-num">7</div>
+              <div class="hero-proof-label">Service Disciplines</div>
+            </div>
+            <div class="hero-proof-item">
+              <div class="hero-proof-num">100%</div>
+              <div class="hero-proof-label">Client Code Ownership</div>
+            </div>
+            <div class="hero-proof-item">
+              <div class="hero-proof-num">$0</div>
+              <div class="hero-proof-label">Vendor Lock-in Fees</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: CSS-only private dashboard mockup -->
+        <div class="hero-v2-visual">
+          <div class="hero-mockup">
+            <div class="mockup-chrome">
+              <div class="mockup-dots"><span></span><span></span><span></span></div>
+              <div class="mockup-chrome-title">AGRV &mdash; Private Analytics</div>
+              <div class="mockup-live"><div class="mockup-live-dot"></div>Live</div>
+            </div>
+            <div class="mockup-body">
+              <div class="mockup-section-label">System Metrics</div>
+              <div class="mockup-metric">
+                <div class="mockup-metric-header">
+                  <span class="mockup-metric-label">Private Data Volume</span>
+                  <span class="mockup-metric-value">2.4 TB</span>
+                </div>
+                <div class="mockup-bar-track"><div class="mockup-bar-fill" style="width:78%"></div></div>
+              </div>
+              <div class="mockup-metric">
+                <div class="mockup-metric-header">
+                  <span class="mockup-metric-label">AI Models Active</span>
+                  <span class="mockup-metric-value">3 running</span>
+                </div>
+                <div class="mockup-bar-track"><div class="mockup-bar-fill green" style="width:45%"></div></div>
+              </div>
+              <div class="mockup-metric">
+                <div class="mockup-metric-header">
+                  <span class="mockup-metric-label">Queries Today</span>
+                  <span class="mockup-metric-value">1,847</span>
+                </div>
+                <div class="mockup-bar-track"><div class="mockup-bar-fill blue" style="width:86%"></div></div>
+              </div>
+              <div class="mockup-divider"></div>
+              <div class="mockup-chips">
+                <div class="mockup-chip teal">&#128274; On-Premise</div>
+                <div class="mockup-chip green">&#10003; No Cloud</div>
+                <div class="mockup-chip blue">AES-256</div>
+              </div>
+              <div class="mockup-log">
+                <div class="mockup-log-row">
+                  <span class="mockup-log-time">09:14</span>
+                  <span class="mockup-log-text">llama3 inference — clinical query</span>
+                  <span class="mockup-log-status ok">OK</span>
+                </div>
+                <div class="mockup-log-row">
+                  <span class="mockup-log-time">09:13</span>
+                  <span class="mockup-log-text">ETL pipeline — lab_data_v3.csv</span>
+                  <span class="mockup-log-status ok">OK</span>
+                </div>
+                <div class="mockup-log-row">
+                  <span class="mockup-log-time">09:11</span>
+                  <span class="mockup-log-text">RAG retrieval — 214 docs indexed</span>
+                  <span class="mockup-log-status run">RUN</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </section>
-    <footer class="footer">
-      <p>&copy; <span id="year"></span> AGRV Solutions LLC. All rights reserved.</p>
-    </footer>
+
+    <!-- ═══ CAPABILITY MARQUEE ═══ -->
+    <div class="marquee-section">
+      <div class="marquee-track">
+        <span class="marquee-item">Python</span><span class="marquee-item">PyTorch</span><span class="marquee-item">React</span><span class="marquee-item">Next.js</span><span class="marquee-item">PostgreSQL</span><span class="marquee-item">Docker</span><span class="marquee-item">Kubernetes</span><span class="marquee-item">Llama&nbsp;3</span><span class="marquee-item">FastAPI</span><span class="marquee-item">LangChain</span><span class="marquee-item">JupyterHub</span><span class="marquee-item">Moodle</span><span class="marquee-item">scikit-learn</span><span class="marquee-item">TensorFlow</span><span class="marquee-item">Redis</span><span class="marquee-item">FAISS</span><span class="marquee-item">Hugging&nbsp;Face</span><span class="marquee-item">vLLM</span><span class="marquee-item">DVC</span><span class="marquee-item">MLflow</span>
+        <!-- duplicate for seamless loop -->
+        <span class="marquee-item">Python</span><span class="marquee-item">PyTorch</span><span class="marquee-item">React</span><span class="marquee-item">Next.js</span><span class="marquee-item">PostgreSQL</span><span class="marquee-item">Docker</span><span class="marquee-item">Kubernetes</span><span class="marquee-item">Llama&nbsp;3</span><span class="marquee-item">FastAPI</span><span class="marquee-item">LangChain</span><span class="marquee-item">JupyterHub</span><span class="marquee-item">Moodle</span><span class="marquee-item">scikit-learn</span><span class="marquee-item">TensorFlow</span><span class="marquee-item">Redis</span><span class="marquee-item">FAISS</span><span class="marquee-item">Hugging&nbsp;Face</span><span class="marquee-item">vLLM</span><span class="marquee-item">DVC</span><span class="marquee-item">MLflow</span>
+      </div>
+    </div>
+
+    <!-- ═══ NUMBERS BAND ═══ -->
+    <div class="numbers-band">
+      <div class="numbers-band-inner">
+        <div class="number-stat">
+          <div class="number-stat-value">7</div>
+          <div class="number-stat-label">Service Disciplines</div>
+        </div>
+        <div class="number-stat">
+          <div class="number-stat-value">100%</div>
+          <div class="number-stat-label">Client Code &amp; IP Ownership</div>
+        </div>
+        <div class="number-stat">
+          <div class="number-stat-value alt">$0</div>
+          <div class="number-stat-label">Ongoing Vendor Fees After Delivery</div>
+        </div>
+        <div class="number-stat">
+          <div class="number-stat-value">PhD+MSc</div>
+          <div class="number-stat-label">Senior Founders on Every Project</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ THE AGRV DIFFERENCE ═══ -->
+    <div class="diff-section">
+      <div class="diff-inner">
+        <div class="diff-header">
+          <span class="eyebrow">The AGRV Difference</span>
+          <h2>Why organizations choose us over SaaS and staffing firms</h2>
+          <p>Most technology vendors optimize for their own recurring revenue. We optimize for your independence.</p>
+        </div>
+        <div class="diff-grid">
+
+          <!-- Old way -->
+          <div>
+            <div class="diff-col-header bad">&#9888;&#65039; &nbsp;The Status Quo</div>
+            <div class="diff-item bad">
+              <div class="diff-icon bad">✗</div>
+              <div class="diff-item-text">
+                <h4>Generic tools forced to fit your workflow</h4>
+                <p>Off-the-shelf platforms designed for average use cases, not your specific data, processes, or domain.</p>
+              </div>
+            </div>
+            <div class="diff-item bad">
+              <div class="diff-icon bad">✗</div>
+              <div class="diff-item-text">
+                <h4>Your data on someone else's cloud</h4>
+                <p>Your sensitive research, business, or patient data stored on vendor servers — subject to their policies, breaches, and subpoenas.</p>
+              </div>
+            </div>
+            <div class="diff-item bad">
+              <div class="diff-icon bad">✗</div>
+              <div class="diff-item-text">
+                <h4>Monthly subscriptions that grow with you</h4>
+                <p>Per-seat pricing means your costs scale up as you succeed. You're trapped the more you rely on the platform.</p>
+              </div>
+            </div>
+            <div class="diff-item bad">
+              <div class="diff-icon bad">✗</div>
+              <div class="diff-item-text">
+                <h4>Junior developers handling your project</h4>
+                <p>Senior reps close the deal, then hand you off to junior staff who've never seen your domain.</p>
+              </div>
+            </div>
+            <div class="diff-item bad">
+              <div class="diff-icon bad">✗</div>
+              <div class="diff-item-text">
+                <h4>Proprietary code you can never leave</h4>
+                <p>Black-box platforms with no source access create permanent dependency. Switching costs are deliberately high.</p>
+              </div>
+            </div>
+            <div class="diff-item bad">
+              <div class="diff-icon bad">✗</div>
+              <div class="diff-item-text">
+                <h4>AI trained on everyone's data — including yours</h4>
+                <p>Public AI tools learn from your prompts and documents. Your confidential strategies, research, and data train their models.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- VS column -->
+          <div class="diff-vs-col">
+            <div class="diff-vs-pip">VS</div>
+            <div class="diff-vs-pip">VS</div>
+            <div class="diff-vs-pip">VS</div>
+            <div class="diff-vs-pip">VS</div>
+            <div class="diff-vs-pip">VS</div>
+            <div class="diff-vs-pip">VS</div>
+          </div>
+
+          <!-- AGRV way -->
+          <div>
+            <div class="diff-col-header good">&#10022; &nbsp;The AGRV Way</div>
+            <div class="diff-item good">
+              <div class="diff-icon good">✓</div>
+              <div class="diff-item-text">
+                <h4>Software designed precisely for your workflow</h4>
+                <p>Every field, every screen, every integration — built around exactly how your team works, not adapted from a generic template.</p>
+              </div>
+            </div>
+            <div class="diff-item good">
+              <div class="diff-icon good">✓</div>
+              <div class="diff-item-text">
+                <h4>Your data on your servers, under your control</h4>
+                <p>We deploy on your infrastructure. Your data never moves off your network unless you explicitly choose it to.</p>
+              </div>
+            </div>
+            <div class="diff-item good">
+              <div class="diff-icon good">✓</div>
+              <div class="diff-item-text">
+                <h4>One-time project cost — zero ongoing fees</h4>
+                <p>We charge for the build, not the usage. Once delivered, you run it with no payments to us — ever.</p>
+              </div>
+            </div>
+            <div class="diff-item good">
+              <div class="diff-icon good">✓</div>
+              <div class="diff-item-text">
+                <h4>PhD and MSc founders on every engagement</h4>
+                <p>The same two senior scientists who scoped your project are the ones who build, test, and deliver it.</p>
+              </div>
+            </div>
+            <div class="diff-item good">
+              <div class="diff-icon good">✓</div>
+              <div class="diff-item-text">
+                <h4>Full source code delivered — zero dependencies</h4>
+                <p>Every line of code, every config file, every database schema is yours. We document it so you can run it without us.</p>
+              </div>
+            </div>
+            <div class="diff-item good">
+              <div class="diff-icon good">✓</div>
+              <div class="diff-item-text">
+                <h4>Private AI trained only on your data</h4>
+                <p>We deploy self-hosted models on your hardware. Your data is never sent to OpenAI, Google, or anyone else — ever.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ OUR SOLUTIONS ═══ -->
+    <section>
+      <div class="container">
+        <div class="text-center">
+          <span class="eyebrow">Our Solutions</span>
+          <h2 class="section-title section-title-gradient">Seven disciplines. One team. Total ownership.</h2>
+          <div class="divider"></div>
+          <p class="section-sub">From a single custom application to a full private AI deployment, every engagement is scoped individually and delivered with full ownership transferred to you.</p>
+        </div>
+        <br><br>
+        <div class="solutions-grid">
+          <a class="solution-card" href="services/custom-software.html">
+            <div class="solution-card-icon">&#128187;</div>
+            <h3>Custom Software Development</h3>
+            <p>Precision-built desktop, web, cross-platform, and legacy applications tailored exactly to your workflows and infrastructure.</p>
+            <span class="learn-more">Learn more &#8594;</span>
+          </a>
+          <a class="solution-card" href="services/data-modeling.html">
+            <div class="solution-card-icon green">&#128202;</div>
+            <h3>Data Modeling &amp; Analytics</h3>
+            <p>Predictive modeling, statistical auditing, and custom ML pipelines that turn your private data into actionable intelligence — fully offline if needed.</p>
+            <span class="learn-more">Learn more &#8594;</span>
+          </a>
+          <a class="solution-card" href="services/data-infrastructure.html">
+            <div class="solution-card-icon blue">&#128274;</div>
+            <h3>Data Infrastructure</h3>
+            <p>Private on-premise database architecture, secure storage, and offline data integration so you always control where your data lives.</p>
+            <span class="learn-more">Learn more &#8594;</span>
+          </a>
+          <a class="solution-card" href="services/consulting.html">
+            <div class="solution-card-icon">&#128172;</div>
+            <h3>Scientific Consulting</h3>
+            <p>Operations optimization, statistical interpretation, and specialized biological and health sciences consulting from senior-level scientists.</p>
+            <span class="learn-more">Learn more &#8594;</span>
+          </a>
+          <a class="solution-card" href="services/ai-ml.html">
+            <div class="solution-card-icon blue">&#129302;</div>
+            <h3>AI &amp; Machine Learning</h3>
+            <p>Custom LLM integrations, RAG systems, and predictive AI — built on your data, deployed on your hardware, never shared with any cloud provider.</p>
+            <span class="learn-more">Learn more &#8594;</span>
+          </a>
+          <a class="solution-card" href="services/training-platforms.html">
+            <div class="solution-card-icon">&#127891;</div>
+            <h3>Training &amp; Education Platforms</h3>
+            <p>Custom Moodle/Canvas deployments, JupyterHub environments, and interactive learning portals for workforce training and scientific education.</p>
+            <span class="learn-more">Learn more &#8594;</span>
+          </a>
+          <a class="solution-card" href="services/maintenance.html">
+            <div class="solution-card-icon green">&#128295;</div>
+            <h3>Maintenance &amp; Support</h3>
+            <p>Ongoing security updates, feature expansions, hosting support, and hardware maintenance so your platforms keep pace with your needs.</p>
+            <span class="learn-more">Learn more &#8594;</span>
+          </a>
+        </div>
+        <div style="text-align:center; margin-top:2.5rem;">
+          <a href="services.html" class="btn btn-outline btn-lg">View all solutions in depth &#8594;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ INDUSTRIES WE SERVE ═══ -->
+    <section class="alt">
+      <div class="container">
+        <div class="text-center">
+          <span class="eyebrow">Industries We Serve</span>
+          <h2 class="section-title">Specialized expertise across critical sectors</h2>
+          <div class="divider"></div>
+          <p class="section-sub">Our founders bring deep scientific and technical backgrounds that let us engage meaningfully — not just technically — with the domains our clients work in.</p>
+        </div>
+        <br><br>
+        <div class="industries-grid">
+          <div class="industry-tile">
+            <div class="industry-icon">&#127973;</div>
+            <h4>Healthcare &amp; Life Sciences</h4>
+            <p>HIPAA-aware, private AI and data systems for clinical, research, and biotech organizations.</p>
+          </div>
+          <div class="industry-tile">
+            <div class="industry-icon">&#128300;</div>
+            <h4>Research &amp; Academia</h4>
+            <p>Custom workflows, modeling platforms, and JupyterHub environments for universities and research labs.</p>
+          </div>
+          <div class="industry-tile">
+            <div class="industry-icon">&#127807;</div>
+            <h4>Agriculture &amp; Environment</h4>
+            <p>Precision ag data pipelines, satellite imagery AI, and field-science reporting tools.</p>
+          </div>
+          <div class="industry-tile">
+            <div class="industry-icon">&#127970;</div>
+            <h4>Small &amp; Mid-Size Business</h4>
+            <p>Replace costly SaaS subscriptions with owned, custom software tailored to your exact processes.</p>
+          </div>
+          <div class="industry-tile">
+            <div class="industry-icon">&#127963;</div>
+            <h4>Government &amp; Public Sector</h4>
+            <p>SAM-registered, secure custom systems and data workflows for local, state, and federal agencies.</p>
+          </div>
+          <div class="industry-tile">
+            <div class="industry-icon">&#9881;&#65039;</div>
+            <h4>Manufacturing &amp; Operations</h4>
+            <p>Predictive maintenance, quality inspection AI, and on-premise operations analytics.</p>
+          </div>
+          <div class="industry-tile">
+            <div class="industry-icon">&#128218;</div>
+            <h4>Education &amp; Training</h4>
+            <p>Custom LMS platforms, compliance training portals, and interactive curriculum systems.</p>
+          </div>
+          <div class="industry-tile">
+            <div class="industry-icon">&#128202;</div>
+            <h4>Financial &amp; Legal</h4>
+            <p>Private data analytics, document intelligence, and secure workflow automation for regulated industries.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ TRUST PILLARS ═══ -->
+    <section>
+      <div class="container">
+        <div class="text-center">
+          <span class="eyebrow">Why AGRV Solutions</span>
+          <h2 class="section-title">Your strategic technology partner</h2>
+          <div class="divider"></div>
+        </div>
+        <br>
+        <div class="pillars-grid">
+          <div class="pillar">
+            <div class="pillar-icon">&#128300;</div>
+            <h3>Built on Science</h3>
+            <p>Founded by a PhD scientist and an MSc data engineer, every engagement benefits from academic-grade methodology and domain expertise applied to real business problems.</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">&#128381;</div>
+            <h3>You Own Everything</h3>
+            <p>No subscriptions, no lock-in, no recurring platform fees. We build it, deliver full source code and documentation, and the IP is entirely yours from day one.</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">&#128272;</div>
+            <h3>Privacy by Design</h3>
+            <p>We build and deploy solutions on your systems. Your data is never sent to external servers, used for training, or shared with any third party — ever.</p>
+          </div>
+          <div class="pillar">
+            <div class="pillar-icon">&#129309;</div>
+            <h3>Long-Term Partnerships</h3>
+            <p>We don't hand off and disappear. Every client gets direct access to the same senior scientists and engineers throughout the project — and beyond.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ WHO WE SERVE ═══ -->
+    <section class="alt2">
+      <div class="container">
+        <div class="text-center">
+          <span class="eyebrow">Who We Serve</span>
+          <h2 class="section-title">Clients who value privacy, ownership, and precision</h2>
+          <div class="divider"></div>
+          <p class="section-sub">Our clients share one thing in common: they want technology built for them — not a subscription that holds their data and workflows hostage.</p>
+        </div>
+        <br><br>
+        <div class="audience-grid">
+          <div class="audience-card">
+            <div class="audience-card-header">
+              <div class="audience-icon">&#127979;</div>
+              <h3>Research Institutions</h3>
+            </div>
+            <p>Universities and research organizations that need specialized scientific workflows, modeling platforms, or data pipelines — without the overhead of a full internal CS department.</p>
+          </div>
+          <div class="audience-card">
+            <div class="audience-card-header">
+              <div class="audience-icon">&#127970;</div>
+              <h3>Small &amp; Medium Businesses</h3>
+            </div>
+            <p>Companies that generate data but lack internal analytics capability, want on-premise custom software, or are ready to escape cloud platforms that monetize their data.</p>
+          </div>
+          <div class="audience-card">
+            <div class="audience-card-header">
+              <div class="audience-icon">&#127963;</div>
+              <h3>Government &amp; Public Agencies</h3>
+            </div>
+            <p>Local and state agencies requiring secure custom software, data workflows, and records systems — with the procurement transparency and compliance awareness of a registered contractor.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CTA BANNER ═══ -->
+    <div class="cta-banner">
+      <div class="container" style="position:relative">
+        <h2>Ready to own your technology stack?</h2>
+        <p>Every engagement starts with a free, no-obligation consultation. Tell us your problem — we'll show you how to solve it without losing control.</p>
+        <div style="display:flex;gap:0.85rem;justify-content:center;flex-wrap:wrap;">
+          <a href="contact.html" class="btn btn-white btn-lg">Start a Conversation</a>
+          <a href="services.html" class="btn btn-outline-white btn-lg">View All Solutions</a>
+        </div>
+      </div>
+    </div>
+
   </main>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <img src="images/logo.png" alt="AGRV Solutions" class="footer-logo">
+      <ul class="footer-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Solutions</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <span class="footer-copy">&copy; <span id="year"></span> AGRV Solutions LLC</span>
+    </div>
+  </footer>
+
+</div>
+<script src="shared.js"></script>
 </body>
 </html>
