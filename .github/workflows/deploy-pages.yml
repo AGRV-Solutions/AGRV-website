@@ -1,0 +1,48 @@
+# Deploy static site to GitHub Pages with Web3Forms key injected from a secret.
+#
+# Setup:
+# 1. Repo → Settings → Secrets and variables → Actions → New repository secret
+#    Name: WEB3FORMS_ACCESS_KEY   Value: (your key from web3forms.com)
+# 2. Repo → Settings → Pages → Build and deployment → Source: "GitHub Actions"
+#
+# If you still use "Deploy from a branch" instead of this workflow, create
+# web3forms-config.js locally (see web3forms-config.example.js) — do not commit it.
+
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches: ['main', 'master']
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Inject Web3Forms key (from secret)
+        env:
+          WEB3FORMS_ACCESS_KEY: ${{ secrets.WEB3FORMS_ACCESS_KEY }}
+        run: |
+          node -e "require('fs').writeFileSync('web3forms-config.js', 'window.AGRV_WEB3FORMS_KEY = ' + JSON.stringify(process.env.WEB3FORMS_ACCESS_KEY || '') + ';\\n');"
+
+      - uses: actions/configure-pages@v4
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - id: deployment
+        uses: actions/deploy-pages@v4

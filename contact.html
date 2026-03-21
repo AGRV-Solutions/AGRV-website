@@ -125,9 +125,11 @@
             </div>
           </div>
 
-          <!-- RIGHT: Form — replace YOUR_FORM_ID with your Formspree endpoint -->
-          <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <!-- RIGHT: Form — emails via Web3Forms → agrvsolutions@gmail.com (see contact-form.js + readme) -->
+          <form class="contact-form" id="contactForm" action="#" method="POST" novalidate>
             <h2>Send us a message</h2>
+
+            <p id="contactFormStatus" class="contact-form-status" hidden role="status" aria-live="polite"></p>
 
             <div class="form-row">
               <div class="form-group">
@@ -142,7 +144,7 @@
 
             <div class="form-group">
               <label for="email">Email Address</label>
-              <input type="email" id="email" name="email" placeholder="jane@example.com" required>
+              <input type="email" id="email" name="email" placeholder="jane@company.com" required autocomplete="email" inputmode="email" maxlength="254" title="Use a real address you check — we reply here">
             </div>
 
             <div class="form-group">
@@ -158,6 +160,8 @@
                 <option value="Data Modeling & Analytics">Data Modeling &amp; Analytics</option>
                 <option value="Data Infrastructure">Data Infrastructure</option>
                 <option value="Scientific Consulting">Scientific Consulting</option>
+                <option value="AI & Machine Learning">AI &amp; Machine Learning</option>
+                <option value="Training & Education Platforms">Training &amp; Education Platforms</option>
                 <option value="Maintenance & Support">Maintenance &amp; Support</option>
                 <option value="Government / Contract Work">Government / Contract Work</option>
                 <option value="General Inquiry">General Inquiry</option>
@@ -202,5 +206,7 @@
 
 </div>
 <script src="shared.js"></script>
+<script src="web3forms-config.js"></script>
+<script src="contact-form.js"></script>
 </body>
 </html>

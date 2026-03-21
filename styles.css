@@ -2218,6 +2218,37 @@ section.alt2 { background: var(--bg-section-2); }
 .contact-form { background: var(--bg-card); border: 1.5px solid var(--border); border-radius: var(--radius); border-top: 3px solid var(--teal); padding: 2rem; }
 .contact-form h2 { font-size: 1.15rem; font-weight: 700; margin-bottom: 1.5rem; }
 
+.contact-form-status {
+  margin-bottom: 1.25rem;
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  line-height: 1.55;
+}
+
+.contact-form-status--pending {
+  background: var(--teal-light);
+  border: 1px solid var(--border-strong);
+  color: var(--text-secondary);
+}
+
+.contact-form-status--success {
+  background: rgba(74, 158, 40, 0.12);
+  border: 1px solid rgba(74, 158, 40, 0.35);
+  color: var(--text);
+}
+
+[data-theme="dark"] .contact-form-status--success {
+  background: rgba(126, 217, 87, 0.1);
+  border-color: rgba(126, 217, 87, 0.3);
+}
+
+.contact-form-status--error {
+  background: rgba(220, 80, 80, 0.1);
+  border: 1px solid rgba(220, 80, 80, 0.35);
+  color: var(--text);
+}
+
 .form-row { display: grid; gap: 1rem; grid-template-columns: 1fr 1fr; margin-bottom: 1rem; }
 @media (max-width: 480px) { .form-row { grid-template-columns: 1fr; } }
 
