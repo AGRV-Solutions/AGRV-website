@@ -1,12 +1,10 @@
-# Deploy static site to GitHub Pages with Web3Forms key injected from a secret.
+# Deploy to GitHub Pages and inject secrets into site-config.js (not stored in git).
 #
-# Setup:
-# 1. Repo → Settings → Secrets and variables → Actions → New repository secret
-#    Name: WEB3FORMS_ACCESS_KEY   Value: (your key from web3forms.com)
-# 2. Repo → Settings → Pages → Build and deployment → Source: "GitHub Actions"
+# Required repository secrets (Settings → Secrets and variables → Actions):
+#   WEB3FORMS_ACCESS_KEY  — from web3forms.com
+#   GA_MEASUREMENT_ID     — e.g. G-XXXXXXXXXX (Google Analytics)
 #
-# If you still use "Deploy from a branch" instead of this workflow, create
-# web3forms-config.js locally (see web3forms-config.example.js) — do not commit it.
+# Pages: Settings → Pages → Source → GitHub Actions
 
 name: Deploy GitHub Pages
 
@@ -32,11 +30,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Inject Web3Forms key (from secret)
+      - name: Write site-config.js from secrets
         env:
           WEB3FORMS_ACCESS_KEY: ${{ secrets.WEB3FORMS_ACCESS_KEY }}
-        run: |
-          node -e "require('fs').writeFileSync('web3forms-config.js', 'window.AGRV_WEB3FORMS_KEY = ' + JSON.stringify(process.env.WEB3FORMS_ACCESS_KEY || '') + ';\\n');"
+          GA_MEASUREMENT_ID: ${{ secrets.GA_MEASUREMENT_ID }}
+        run: node scripts/write-site-config.js
 
       - uses: actions/configure-pages@v4
 

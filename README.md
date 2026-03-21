@@ -4,59 +4,76 @@ Website for [agrvsolutions.com](https://agrvsolutions.com). Hosted on GitHub Pag
 
 ## Run locally
 
-From the project root:
-
 ```bash
+cp .env.example .env
+# Edit .env: WEB3FORMS_ACCESS_KEY=… and GA_MEASUREMENT_ID=G-…
+node scripts/write-site-config.js
+
 python3 -m http.server 8080
 ```
 
-Then open **http://localhost:8080**.
+Open **http://localhost:8080**.  
+`site-config.js` is **gitignored**; without running the script you may see 404s for `site-config.js` (contact form + analytics won’t work until it exists).
 
-With Node:
+---
 
-```bash
-npx serve .
-```
+## Secrets (nothing sensitive in git)
 
-## Secrets (`.env` — not in git)
+| Item | Purpose |
+|------|--------|
+| **WEB3FORMS_ACCESS_KEY** | Contact form → email (Web3Forms) |
+| **GA_MEASUREMENT_ID** | Google Analytics 4 (e.g. `G-XXXXXXXXXX`) |
 
-All local secrets belong in **`.env`**. That file is **gitignored**; only **`.env.example`** is committed as a template.
+These live in **`.env`** locally and in **GitHub Actions secrets** for deploy.  
+They are **not** hardcoded in HTML/JS in the repo.
 
-```bash
-cp .env.example .env
-# Edit .env and set WEB3FORMS_ACCESS_KEY=your-key-from-web3forms.com
+**Note:** GA measurement IDs always appear in the **live** site’s `site-config.js` (browsers need them). They are only removed from **source control**.
 
-node scripts/sync-env-to-web3forms.js
-```
+---
 
-That generates **`web3forms-config.js`** (also gitignored), which the contact page loads. Re-run the script whenever you change `.env`.
+## GitHub Pages + Actions (production)
 
-**Do not** commit `.env`, `web3forms-config.js`, or any `*.pem` / `credentials.json` — see `.gitignore`.
+### One-time setup
 
-## Contact form (email to agrvsolutions@gmail.com)
+1. **Repository secrets**  
+   **GitHub repo → Settings → Secrets and variables → Actions → New repository secret**
 
-The contact page sends messages through **[Web3Forms](https://web3forms.com)** (free tier). Subjects look like: **`53583a <Area of Interest>`**.
+   | Name | Value |
+   |------|--------|
+   | `WEB3FORMS_ACCESS_KEY` | UUID from [web3forms.com](https://web3forms.com) |
+   | `GA_MEASUREMENT_ID` | e.g. `G-XXXXXXXXXX` (GA4 → Admin → Data streams → your site) |
 
-The key is **not** in `contact-form.js`. Use **`.env` → sync script → `web3forms-config.js`** (see above), or hand-create `web3forms-config.js` from `web3forms-config.example.js`.
+2. **Use Actions for Pages**  
+   **Settings → Pages → Build and deployment**  
+   - **Source:** **GitHub Actions** (not “Deploy from a branch”).
 
-### Web3Forms dashboard
+3. **First deploy**  
+   Push to **`main`** or **`master`**.  
+   Workflow **`.github/workflows/deploy-pages.yml`** will:
+   - run `node scripts/write-site-config.js` with those secrets
+   - upload the site (including generated `site-config.js`)
+   - publish to Pages  
 
-Allow your domain (**`agrvsolutions.com`**) and/or **`localhost`** for local testing.
+4. **Web3Forms dashboard**  
+   Allow domain **`agrvsolutions.com`** (and `www` if you use it).
 
-### GitHub Pages — hide the key in the repo
+5. **If Pages was previously “branch” deploy**  
+   Switching to Actions disables the old branch build; only the workflow deploys from then on.
 
-1. Repo → **Settings → Secrets and variables → Actions → New repository secret**  
-   - Name: **`WEB3FORMS_ACCESS_KEY`**  
-   - Value: your Web3Forms access key  
-2. Repo → **Settings → Pages** → set **Source** to **GitHub Actions** (not “Deploy from a branch”) if you use the workflow below.
-3. Push the included workflow **`.github/workflows/deploy-pages.yml`**. On each push to `main`/`master`, it creates `web3forms-config.js` from the secret and deploys the site. The key never appears in git history.
+### After setup
 
-If you keep **Deploy from a branch** instead of Actions, you cannot inject the secret automatically — you would have to commit a config file (key would be public) or switch to Actions deploy.
+- Change a secret: **Settings → Secrets →** edit → push any commit (or re-run workflow) to redeploy.
+- **Actions** tab shows run logs if deploy fails.
 
-### Email validation (browser only)
+---
 
-The form checks format, rejects obvious fake prefixes (`test@…`, `fake@…`), and blocks common **disposable** domains. It **cannot** prove a mailbox exists (that needs a server or paid verification API).
+## Contact form
 
-## Hosting
+- Subjects: **`53583a <Area of Interest>`**
+- Web3Forms: allow your domain; see [web3forms.com](https://web3forms.com)
 
-The site is set up for GitHub Pages with the custom domain. See **[HOSTING.md](HOSTING.md)** for DNS (Namecheap) and GitHub Pages setup.
+---
+
+## Hosting / DNS
+
+See **[HOSTING.md](HOSTING.md)** for Namecheap DNS and custom domain setup.

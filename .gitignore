@@ -4,12 +4,12 @@
 
 # --- Environment & secrets (never commit) ---
 
-# All env files except the committed template
 .env
 .env.*
 !.env.example
 
-# Generated contact-form config (from .env or hand-edited)
+# Generated from .env or CI (Web3Forms + GA IDs)
+site-config.js
 web3forms-config.js
 
 # Keys & credentials

@@ -1,8 +1,8 @@
 /**
  * Contact form → email via Web3Forms (https://web3forms.com)
  *
- * Key: set window.AGRV_WEB3FORMS_KEY in web3forms-config.js (local, gitignored)
- *      OR inject via GitHub Actions secret WEB3FORMS_ACCESS_KEY (see readme).
+ * Key: window.AGRV_WEB3FORMS_KEY from site-config.js (.env → node scripts/write-site-config.js)
+ *      or GitHub Actions secrets (see readme + .github/workflows/deploy-pages.yml).
  *
  * Emails → agrvsolutions@gmail.com with subject: 53583a <Area of Interest>
  */
@@ -98,7 +98,7 @@
           statusEl.hidden = false;
           statusEl.className = 'contact-form-status contact-form-status--error';
           statusEl.textContent =
-            'Form is not configured: add web3forms-config.js locally (copy from web3forms-config.example.js) or set the WEB3FORMS_ACCESS_KEY GitHub secret for deployment. See readme.md.';
+            'Form is not configured: run `node scripts/write-site-config.js` after setting WEB3FORMS_ACCESS_KEY in `.env`, or add the WEB3FORMS_ACCESS_KEY secret for GitHub Actions. See readme.md.';
         }
         return;
       }
