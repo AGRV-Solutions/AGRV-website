@@ -28,13 +28,13 @@
         <li class="has-dropdown">
           <a href="../services.html" class="active">Solutions <svg class="nav-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></a>
           <ul class="nav-dropdown" role="list">
-            <li><a href="custom-software.html"><span class="dropdown-icon">&#128187;</span>Custom Software</a></li>
-            <li><a href="data-modeling.html"><span class="dropdown-icon green">&#128202;</span>Data Modeling &amp; Analytics</a></li>
-            <li><a href="data-infrastructure.html"><span class="dropdown-icon blue">&#128274;</span>Data Infrastructure</a></li>
-            <li><a href="consulting.html"><span class="dropdown-icon">&#128172;</span>Scientific Consulting</a></li>
-            <li><a href="ai-ml.html"><span class="dropdown-icon green">&#129302;</span>AI &amp; Machine Learning</a></li>
-            <li><a href="training-platforms.html"><span class="dropdown-icon blue">&#127891;</span>Training &amp; Education Platforms</a></li>
-            <li><a href="maintenance.html"><span class="dropdown-icon">&#128295;</span>Maintenance &amp; Support</a></li>
+            <li><a href="custom-software.html"><span class="dropdown-icon">DEV</span>Custom Software</a></li>
+            <li><a href="data-modeling.html"><span class="dropdown-icon green">DATA</span>Data Modeling &amp; Analytics</a></li>
+            <li><a href="data-infrastructure.html"><span class="dropdown-icon blue">INF</span>Data Infrastructure</a></li>
+            <li><a href="consulting.html"><span class="dropdown-icon">SCI</span>Scientific Consulting</a></li>
+            <li><a href="ai-ml.html"><span class="dropdown-icon green">AI</span>AI &amp; Machine Learning</a></li>
+            <li><a href="training-platforms.html"><span class="dropdown-icon blue">LMS</span>Training &amp; Education Platforms</a></li>
+            <li><a href="maintenance.html"><span class="dropdown-icon">OPS</span>Maintenance &amp; Support</a></li>
             <div class="nav-dropdown-divider"></div>
             <li><a href="../services.html">&#8594; View all solutions</a></li>
           </ul>
@@ -42,9 +42,9 @@
         <li class="has-dropdown">
           <a href="../about.html">About <svg class="nav-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></a>
           <ul class="nav-dropdown" role="list">
-            <li><a href="../about.html#mission"><span class="dropdown-icon">&#127919;</span>Mission &amp; Values</a></li>
-            <li><a href="../about.html#team"><span class="dropdown-icon green">&#128101;</span>Our Team</a></li>
-            <li><a href="../about.html#service-area"><span class="dropdown-icon blue">&#127758;</span>Service Area</a></li>
+            <li><a href="../about.html#mission"><span class="dropdown-icon">WHY</span>Mission &amp; Values</a></li>
+            <li><a href="../about.html#team"><span class="dropdown-icon green">TEAM</span>Our Team</a></li>
+            <li><a href="../about.html#service-area"><span class="dropdown-icon blue">MAP</span>Service Area</a></li>
           </ul>
         </li>
         <li><a href="../contact.html">Contact</a></li>
@@ -69,7 +69,7 @@
           <span class="eyebrow">Maintenance &amp; Support</span>
           <h1>We stand behind what we build — long after delivery</h1>
           <p>Software doesn't stop needing attention once deployed. Security landscapes change, requirements evolve, and hardware ages. We provide ongoing support that keeps your systems healthy, secure, and growing — with no hand-off to a third-party support team that's never seen your code.</p>
-          <div style="display:flex;gap:0.85rem;flex-wrap:wrap;">
+          <div class="solution-hero-actions">
             <a href="../contact.html" class="btn btn-primary">Talk to an Expert</a>
             <a href="../services.html#pricing" class="btn btn-outline">See Pricing</a>
           </div>
@@ -276,14 +276,14 @@
         <br>
         <div class="use-case-grid">
           <div class="use-case-card">
-            <div class="use-case-label">Research Institution</div>
-            <h3>Ongoing data pipeline and platform maintenance</h3>
-            <p>A university lab depends on a custom data collection and analysis platform built by AGRV Solutions. They need continued support for system health, feature additions as research protocols evolve, and on-call availability for critical issues during active field seasons.</p>
-          </div>
-          <div class="use-case-card">
             <div class="use-case-label">Small Business</div>
             <h3>Server monitoring and scheduled security updates</h3>
             <p>A company running an on-premise private server and custom business software wants regular security patching, uptime monitoring, and a trusted contact for hardware and software issues — without the cost of a full-time IT staff member.</p>
+          </div>
+          <div class="use-case-card">
+            <div class="use-case-label">Research Institution</div>
+            <h3>Ongoing data pipeline and platform maintenance</h3>
+            <p>A university lab depends on a custom data collection and analysis platform built by AGRV Solutions. They need continued support for system health, feature additions as research protocols evolve, and on-call availability for critical issues during active field seasons.</p>
           </div>
           <div class="use-case-card">
             <div class="use-case-label">Government Agency</div>
@@ -294,40 +294,7 @@
       </div>
     </section>
 
-    <section class="alt">
-      <div class="container">
-        <div class="text-center">
-          <span class="eyebrow">FAQ</span>
-          <h2 class="section-title">Common questions</h2>
-          <div class="divider"></div>
-        </div>
-        <br>
-        <div class="faq-list" style="max-width:52rem; margin:0 auto;">
-          <div class="faq-item">
-            <button class="faq-question">What exactly does the warranty period cover?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
-            <div class="faq-answer">The warranty period covers defects — bugs, incorrect behavior, and failures that stem from errors in the code or configuration we delivered. It does not cover feature requests, changes to requirements, or issues arising from changes made to the system by your team after delivery. The length of the warranty period is defined in the project contract and is typically 30–90 days from delivery, depending on project complexity.</div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question">Can you provide support for software that you didn't originally build?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
-            <div class="faq-answer">Yes, with an assessment first. We'll review the existing codebase, documentation, and infrastructure to understand what we're taking on — and give you an honest assessment of what's supportable, what needs remediation, and what our ongoing involvement would cost. We won't take on support contracts for systems we can't responsibly maintain.</div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question">How quickly do you respond to critical issues?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
-            <div class="faq-answer">Response time commitments are defined in your support contract. Retainer contracts include defined response time SLAs for critical issues, typically within 4–8 business hours. For per-incident support, we respond as quickly as our current workload allows — generally within one business day for non-critical issues and same-day for emergencies reported during business hours.</div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question">Can we add new features to our existing platform over time?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
-            <div class="faq-answer">Yes — and this is one of the significant advantages of working with the team that built the original system. We can extend functionality quickly because we understand the existing architecture completely. Feature work can be done on a per-item basis (scoped and quoted individually) or included in a retainer as a defined allocation of development hours per month.</div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question">Do you provide support remotely, or can you come on-site?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
-            <div class="faq-answer">Both. Most software maintenance, monitoring, and updates can be handled remotely — often without any interruption to your operations. For hardware issues, physical installation, or situations where on-site presence is required, we provide in-person service to clients throughout the Twin Cities metro, Greater Minnesota, and neighboring states. Travel costs apply outside the metro area and are agreed in advance.</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
+    <section class="solution-related-section">
       <div class="container">
         <span class="eyebrow">Related Solutions</span>
         <h2 class="section-title" style="margin-bottom:1.5rem;">Often paired with this service</h2>
@@ -346,11 +313,43 @@
       </div>
     </section>
 
-    <div class="cta-banner">
+    <section class="solution-faq-final">
+      <div class="container">
+        <div class="solution-section-head center">
+          <span class="eyebrow">FAQ</span>
+          <h2 class="section-title">Common questions</h2>
+          <div class="divider"></div>
+        </div>
+        <div class="faq-list faq-list-constrained">
+          <div class="faq-item">
+            <button class="faq-question">What exactly does the warranty period cover?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+            <div class="faq-answer">The warranty period covers defects — bugs, incorrect behavior, and failures that stem from errors in the code or configuration we delivered. It does not cover feature requests, changes to requirements, or issues arising from changes made to the system by your team after delivery. The length of the warranty period is defined in the project contract and is typically 30–90 days from delivery, depending on project complexity.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Can you provide support for software that you didn't originally build?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+            <div class="faq-answer">Yes, with an assessment first. We'll review the existing codebase, documentation, and infrastructure to understand what we're taking on — and give you an honest assessment of what's supportable, what needs remediation, and what our ongoing involvement would cost. We won't take on support contracts for systems we can't responsibly maintain.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How quickly do you respond to critical issues?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+            <div class="faq-answer">Response time commitments are defined in your support contract. Retainer contracts include defined response times for critical issues, typically within 4–8 business hours. For per-incident support, we respond as quickly as our current workload allows — generally within one business day for non-critical issues and same-day for emergencies reported during business hours.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Can we add new features to our existing platform over time?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+            <div class="faq-answer">Yes — and this is one of the significant advantages of working with the team that built the original system. We can extend functionality quickly because we understand the existing architecture completely. Feature work can be done on a per-item basis (scoped and quoted individually) or included in a retainer as a defined allocation of development hours per month.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Do you provide support remotely, or can you come on-site?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+            <div class="faq-answer">Both. Most software maintenance, monitoring, and updates can be handled remotely — often without any interruption to your operations. For hardware issues, physical installation, or situations where on-site presence is required, we provide in-person service to clients throughout the Twin Cities metro, Greater Minnesota, and neighboring states. Travel costs apply outside the metro area and are agreed in advance.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="solution-cta-strip">
       <div class="container">
         <h2>Want to keep your systems healthy and growing?</h2>
         <p>Whether you're finishing a new project or looking for support on an existing system, we'll design a support arrangement that fits your needs and budget.</p>
-        <div style="display:flex;gap:0.85rem;justify-content:center;flex-wrap:wrap;">
+        <div class="solution-cta-actions">
           <a href="../contact.html" class="btn btn-white btn-lg">Start the Conversation</a>
           <a href="../services.html" class="btn btn-outline-white btn-lg">All Solutions</a>
         </div>

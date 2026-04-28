@@ -50,6 +50,8 @@
     document.querySelectorAll('.nav-links > li.has-dropdown').forEach(function (li) {
       var trigger = li.querySelector(':scope > a');
       if (!trigger) return;
+      trigger.setAttribute('aria-haspopup', 'true');
+      trigger.setAttribute('aria-expanded', 'false');
 
       /* Toggle on click */
       trigger.addEventListener('click', function (e) {
@@ -58,9 +60,24 @@
         /* close all */
         document.querySelectorAll('.nav-links > li.has-dropdown.open').forEach(function (el) {
           el.classList.remove('open');
+          var elTrigger = el.querySelector(':scope > a');
+          if (elTrigger) elTrigger.setAttribute('aria-expanded', 'false');
         });
-        if (!isOpen) li.classList.add('open');
+        if (!isOpen) {
+          li.classList.add('open');
+          trigger.setAttribute('aria-expanded', 'true');
+        }
       });
+    });
+
+    /* Highlight the current page inside dropdowns */
+    var currentUrl = new URL(window.location.href);
+    var currentPath = currentUrl.pathname.replace(/\/$/, '/index.html');
+    document.querySelectorAll('.nav-dropdown a').forEach(function (link) {
+      var linkUrl = new URL(link.getAttribute('href'), window.location.href);
+      var linkPath = linkUrl.pathname.replace(/\/$/, '/index.html');
+      var hashMatches = !linkUrl.hash || linkUrl.hash === currentUrl.hash;
+      if (linkPath === currentPath && hashMatches) link.classList.add('active');
     });
 
     /* Close dropdowns when clicking outside */
@@ -68,6 +85,8 @@
       if (!e.target.closest('.has-dropdown')) {
         document.querySelectorAll('.nav-links > li.has-dropdown.open').forEach(function (el) {
           el.classList.remove('open');
+          var trigger = el.querySelector(':scope > a');
+          if (trigger) trigger.setAttribute('aria-expanded', 'false');
         });
       }
     });
@@ -77,6 +96,8 @@
       if (e.key === 'Escape') {
         document.querySelectorAll('.nav-links > li.has-dropdown.open').forEach(function (el) {
           el.classList.remove('open');
+          var trigger = el.querySelector(':scope > a');
+          if (trigger) trigger.setAttribute('aria-expanded', 'false');
         });
       }
     });
