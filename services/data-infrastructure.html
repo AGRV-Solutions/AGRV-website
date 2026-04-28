@@ -28,13 +28,13 @@
         <li class="has-dropdown">
           <a href="../services.html" class="active">Solutions <svg class="nav-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></a>
           <ul class="nav-dropdown" role="list">
-            <li><a href="custom-software.html"><span class="dropdown-icon">&#128187;</span>Custom Software</a></li>
-            <li><a href="data-modeling.html"><span class="dropdown-icon green">&#128202;</span>Data Modeling &amp; Analytics</a></li>
-            <li><a href="data-infrastructure.html"><span class="dropdown-icon blue">&#128274;</span>Data Infrastructure</a></li>
-            <li><a href="consulting.html"><span class="dropdown-icon">&#128172;</span>Scientific Consulting</a></li>
-            <li><a href="ai-ml.html"><span class="dropdown-icon green">&#129302;</span>AI &amp; Machine Learning</a></li>
-            <li><a href="training-platforms.html"><span class="dropdown-icon blue">&#127891;</span>Training &amp; Education Platforms</a></li>
-            <li><a href="maintenance.html"><span class="dropdown-icon">&#128295;</span>Maintenance &amp; Support</a></li>
+            <li><a href="custom-software.html"><span class="dropdown-icon">DEV</span>Custom Software</a></li>
+            <li><a href="data-modeling.html"><span class="dropdown-icon green">DATA</span>Data Modeling &amp; Analytics</a></li>
+            <li><a href="data-infrastructure.html"><span class="dropdown-icon blue">INF</span>Data Infrastructure</a></li>
+            <li><a href="consulting.html"><span class="dropdown-icon">SCI</span>Scientific Consulting</a></li>
+            <li><a href="ai-ml.html"><span class="dropdown-icon green">AI</span>AI &amp; Machine Learning</a></li>
+            <li><a href="training-platforms.html"><span class="dropdown-icon blue">LMS</span>Training &amp; Education Platforms</a></li>
+            <li><a href="maintenance.html"><span class="dropdown-icon">OPS</span>Maintenance &amp; Support</a></li>
             <div class="nav-dropdown-divider"></div>
             <li><a href="../services.html">&#8594; View all solutions</a></li>
           </ul>
@@ -42,9 +42,9 @@
         <li class="has-dropdown">
           <a href="../about.html">About <svg class="nav-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></a>
           <ul class="nav-dropdown" role="list">
-            <li><a href="../about.html#mission"><span class="dropdown-icon">&#127919;</span>Mission &amp; Values</a></li>
-            <li><a href="../about.html#team"><span class="dropdown-icon green">&#128101;</span>Our Team</a></li>
-            <li><a href="../about.html#service-area"><span class="dropdown-icon blue">&#127758;</span>Service Area</a></li>
+            <li><a href="../about.html#mission"><span class="dropdown-icon">WHY</span>Mission &amp; Values</a></li>
+            <li><a href="../about.html#team"><span class="dropdown-icon green">TEAM</span>Our Team</a></li>
+            <li><a href="../about.html#service-area"><span class="dropdown-icon blue">MAP</span>Service Area</a></li>
           </ul>
         </li>
         <li><a href="../contact.html">Contact</a></li>
@@ -69,7 +69,7 @@
           <span class="eyebrow">Data Infrastructure</span>
           <h1>Your data on your hardware, under your control</h1>
           <p>Cloud providers offer convenience — but at the cost of control, transparency, and privacy. We design and deploy private data infrastructure that keeps your organization's data physically on-premises, encrypted, and accessible only to you.</p>
-          <div style="display:flex;gap:0.85rem;flex-wrap:wrap;">
+          <div class="solution-hero-actions">
             <a href="../contact.html" class="btn btn-primary">Talk to an Expert</a>
             <a href="../services.html#pricing" class="btn btn-outline">See Pricing</a>
           </div>
@@ -86,7 +86,7 @@
               <div class="infra-row">
                 <div class="infra-node highlight">Client App</div>
                 <div class="infra-arrow">→</div>
-                <div class="infra-node blue">REST API</div>
+                <div class="infra-node blue">Local Service</div>
                 <div class="infra-arrow">→</div>
                 <div class="infra-node blue">Auth</div>
               </div>
@@ -106,7 +106,7 @@
               <div class="infra-row" style="justify-content:flex-start;gap:0.5rem;">
                 <span class="svc-tag teal">No internet</span>
                 <span class="svc-tag green">Air-gap ready</span>
-                <span class="svc-tag blue">NDA signed</span>
+                <span class="svc-tag blue">Confidentiality signed</span>
               </div>
             </div>
           </div>
@@ -213,7 +213,7 @@
           <div class="deliverable-card">
             <div class="deliverable-num">01</div>
             <h3>On-Premise Database Architecture</h3>
-            <p>Custom-designed relational and non-relational database systems sized and configured for your data volume, query patterns, and retention requirements. Deployed on your hardware — from a single RAID-1 server to a multi-node cluster — with full documentation and operational runbooks.</p>
+            <p>Custom-designed relational and non-relational database systems sized and configured for your data volume, query patterns, and retention requirements. Deployed and backed up on your server locally — on a single system (RAID-1) or across your systems on a multi-node cluster — with full documentation and operational runbooks.</p>
           </div>
           <div class="deliverable-card">
             <div class="deliverable-num">02</div>
@@ -228,34 +228,8 @@
           <div class="deliverable-card">
             <div class="deliverable-num">04</div>
             <h3>Secure Network Integration</h3>
-            <p>Integration of data systems across private off-line or on-line networks — including multi-site deployments, VPN-secured inter-department connections, and secure API-based data sharing between approved internal systems. Role-based access control and identity management included.</p>
+            <p>Integration of data systems across private off-line or on-line networks — including multi-site deployments, secure inter-department connections, and approved data sharing between internal systems. Role-based access control and identity management included.</p>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="alt">
-      <div class="container">
-        <div style="max-width: 68ch; margin-bottom: 2rem;">
-          <span class="eyebrow">Our Approach</span>
-          <h2 class="section-title" style="text-align:left;">Enterprise-grade infrastructure, right-sized for you</h2>
-          <div class="divider left"></div>
-          <p style="color:var(--muted); font-size:0.95rem; line-height:1.8;">We use production-proven open-source and enterprise technologies, selected to give you the capabilities you need without unnecessary cost or complexity. All configurations are fully documented so your team — or any future provider — can understand and maintain the infrastructure independently.</p>
-        </div>
-        <div class="tech-wrapper">
-          <table class="tech-table">
-            <thead><tr><th>Category</th><th>Technologies &amp; Platforms</th></tr></thead>
-            <tbody>
-              <tr><td>Containerization &amp; Orchestration</td><td>Docker, Kubernetes, OpenShift, Podman</td></tr>
-              <tr><td>Infrastructure as Code</td><td>Ansible, Terraform, shell scripting, systemd services</td></tr>
-              <tr><td>Servers &amp; OS</td><td>Linux (Ubuntu, RHEL, Debian), Windows Server, VM setups (VMware, Proxmox)</td></tr>
-              <tr><td>Databases</td><td>PostgreSQL, MySQL / MariaDB, SQLite, MongoDB, Redis, InfluxDB</td></tr>
-              <tr><td>Security &amp; Access Control</td><td>OAuth2, OpenID Connect, RBAC, LDAP / Active Directory, JWT, TLS/SSL, Vault</td></tr>
-              <tr><td>Backup &amp; Recovery</td><td>Restic, Borgmatic, rsync, RAID configurations, custom backup scripts</td></tr>
-              <tr><td>Monitoring</td><td>Prometheus, Grafana, Uptime Kuma, custom alerting pipelines</td></tr>
-              <tr><td>API &amp; Microservices</td><td>FastAPI, Flask, gRPC, Nginx, Traefik</td></tr>
-            </tbody>
-          </table>
         </div>
       </div>
     </section>
@@ -270,14 +244,14 @@
         <br>
         <div class="use-case-grid">
           <div class="use-case-card">
-            <div class="use-case-label">Research Institution</div>
-            <h3>Secure research data repository</h3>
-            <p>A university research group accumulates sensitive genomic and patient data across multiple studies. They need a centralized, encrypted, access-controlled repository that satisfies IRB requirements and keeps data entirely on university hardware.</p>
-          </div>
-          <div class="use-case-card">
             <div class="use-case-label">Small Business</div>
             <h3>On-premise backup and disaster recovery</h3>
             <p>A regional services company wants to move away from cloud storage subscriptions and establish a private RAID server with automated encrypted backups, monitored availability, and a documented recovery procedure for business continuity.</p>
+          </div>
+          <div class="use-case-card">
+            <div class="use-case-label">Research Institution</div>
+            <h3>Secure research data repository</h3>
+            <p>A university research group accumulates sensitive genomic and patient data across multiple studies. They need a centralized, encrypted, access-controlled repository that satisfies IRB requirements and keeps data entirely on university hardware.</p>
           </div>
           <div class="use-case-card">
             <div class="use-case-label">Government Agency</div>
@@ -288,40 +262,33 @@
       </div>
     </section>
 
-    <section class="alt">
+    <section>
       <div class="container">
-        <div class="text-center">
-          <span class="eyebrow">FAQ</span>
-          <h2 class="section-title">Common questions</h2>
-          <div class="divider"></div>
+        <div style="max-width: 68ch; margin-bottom: 2rem;">
+          <span class="eyebrow">Our Approach</span>
+          <h2 class="section-title" style="text-align:left;">Enterprise-grade infrastructure, right-sized for you</h2>
+          <div class="divider left"></div>
+          <p style="color:var(--muted); font-size:0.95rem; line-height:1.8;">We use production-proven open-source and enterprise technologies, selected to give you the capabilities you need without unnecessary cost or complexity. All configurations are fully documented so your team — or any future provider — can understand and maintain the infrastructure independently.</p>
         </div>
-        <br>
-        <div class="faq-list" style="max-width:52rem; margin:0 auto;">
-          <div class="faq-item">
-            <button class="faq-question">Can you set up a server physically in our office or facility?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
-            <div class="faq-answer">Yes. We provide on-site hardware setup and configuration, including server assembly, RAID configuration, operating system installation, and software deployment. We also document the full configuration and provide training for your staff on day-to-day operations. Ongoing hardware support is available as part of our maintenance contracts.</div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question">How do you ensure our data is never used for external research or shared with third parties?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
-            <div class="faq-answer">We sign a mutual NDA before any project begins. Because the infrastructure we build is entirely on your hardware and network, there is no technical pathway by which your data reaches AGRV Solutions or any third party unless you explicitly share access. We have no persistent connection to your systems after a project is complete unless you engage us for ongoing support — which can be structured to require your approval for any remote access session.</div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question">Can you offer off-site backup storage as an option?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
-            <div class="faq-answer">Yes. As an optional service, we can host encrypted backups on our private local server in the Twin Cities area. Your data is encrypted before it leaves your network, so we hold only ciphertext — we have no ability to read or interpret your data. You physically know where the backup hardware is located and can retrieve it at any time. This is not a cloud service — it is a local, physical backup with full transparency.</div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question">What happens to our infrastructure if we stop working with AGRV Solutions?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
-            <div class="faq-answer">Your infrastructure continues to operate exactly as before. Because it runs on your hardware and is fully documented, there is no dependency on our involvement for ongoing operation. All configuration files, runbooks, and access credentials are yours. If you engage another provider or hire internal staff, they will have everything they need to take over management without disruption.</div>
-          </div>
-          <div class="faq-item">
-            <button class="faq-question">Do you support compliance frameworks such as HIPAA or FedRAMP?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
-            <div class="faq-answer">We design infrastructure with compliance requirements in mind, including data residency, access logging, encryption at rest and in transit, and audit trail generation. For healthcare clients, we follow HIPAA technical safeguard requirements. For government clients, we work within applicable state and federal data handling guidelines. We are not a certified FedRAMP provider but can design systems that support your compliance posture.</div>
-          </div>
+        <div class="tech-wrapper">
+          <table class="tech-table">
+            <thead><tr><th>Category</th><th>Technologies &amp; Platforms</th></tr></thead>
+            <tbody>
+              <tr><td>Containers &amp; Deployment</td><td>Docker, Kubernetes, OpenShift, Podman</td></tr>
+              <tr><td>Repeatable Server Setup</td><td>Ansible, Terraform, shell scripting, systemd services</td></tr>
+              <tr><td>Servers &amp; Operating Systems</td><td>Linux (Ubuntu, Red Hat Enterprise Linux, Debian), Windows Server, virtual machine setups (VMware, Proxmox)</td></tr>
+              <tr><td>Databases</td><td>PostgreSQL, MySQL / MariaDB, SQLite, MongoDB, Redis, InfluxDB</td></tr>
+              <tr><td>Security &amp; Access Control</td><td>Single sign-on, OpenID Connect, role-based access control, Active Directory, encryption certificates, Vault</td></tr>
+              <tr><td>Backup &amp; Recovery</td><td>Restic, Borgmatic, rsync, RAID configurations, custom backup scripts</td></tr>
+              <tr><td>Monitoring</td><td>Prometheus, Grafana, Uptime Kuma, custom alerting pipelines</td></tr>
+              <tr><td>Internal Services &amp; Integrations</td><td>FastAPI, Flask, Nginx, Traefik, approved internal data-sharing services</td></tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </section>
 
-    <section>
+    <section class="solution-related-section">
       <div class="container">
         <span class="eyebrow">Related Solutions</span>
         <h2 class="section-title" style="margin-bottom:1.5rem;">Often paired with this service</h2>
@@ -340,11 +307,43 @@
       </div>
     </section>
 
-    <div class="cta-banner">
+    <section class="solution-faq-final">
+      <div class="container">
+        <div class="solution-section-head center">
+          <span class="eyebrow">FAQ</span>
+          <h2 class="section-title">Common questions</h2>
+          <div class="divider"></div>
+        </div>
+        <div class="faq-list faq-list-constrained">
+          <div class="faq-item">
+            <button class="faq-question">Can you set up a server physically in our office or facility?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+            <div class="faq-answer">Yes. We provide on-site hardware setup and configuration, including server assembly, RAID configuration, operating system installation, and software deployment. We also document the full configuration and provide training for your staff on day-to-day operations. Ongoing hardware support is available as part of our maintenance contracts.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">How do you ensure our data is never used for external research or shared with third parties?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+            <div class="faq-answer">We sign a mutual confidentiality agreement before any project begins. Because the infrastructure we build is entirely on your hardware and network, there is no technical pathway by which your data reaches AGRV Solutions or any third party unless you explicitly share access. We have no persistent connection to your systems after a project is complete unless you engage us for ongoing support — which can be structured to require your approval for any remote access session.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Can you offer off-site backup storage as an option?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+            <div class="faq-answer">Yes. As an optional service, we can host encrypted backups on our private local server in the Twin Cities area. Your data is encrypted before it leaves your network, so we hold only ciphertext — we have no ability to read or interpret your data. You physically know where the backup hardware is located and can retrieve it at any time. This is not a cloud service — it is a local, physical backup with full transparency.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What happens to our infrastructure if we stop working with AGRV Solutions?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+            <div class="faq-answer">Your infrastructure continues to operate exactly as before. Because it runs on your hardware and is fully documented, there is no dependency on our involvement for ongoing operation. All configuration files, runbooks, and access credentials are yours. If you engage another provider or hire internal staff, they will have everything they need to take over management without disruption.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Do you support compliance frameworks such as HIPAA or FedRAMP?<svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+            <div class="faq-answer">We design infrastructure around your compliance needs, including keeping data in approved locations, access logging, encryption at rest and in transit, and audit trail generation. For healthcare clients, we follow HIPAA technical safeguard requirements. For government clients, we work within applicable state and federal data handling guidelines. We are not a certified FedRAMP provider, but we design systems that support your compliance posture.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="solution-cta-strip">
       <div class="container">
         <h2>Ready to take ownership of your data infrastructure?</h2>
         <p>We'll assess your current setup and design a private infrastructure solution that fits your scale, budget, and security requirements.</p>
-        <div style="display:flex;gap:0.85rem;justify-content:center;flex-wrap:wrap;">
+        <div class="solution-cta-actions">
           <a href="../contact.html" class="btn btn-white btn-lg">Start the Conversation</a>
           <a href="../services.html" class="btn btn-outline-white btn-lg">All Solutions</a>
         </div>
